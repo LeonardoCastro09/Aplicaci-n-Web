@@ -30,7 +30,19 @@ class estudiante(db.Model):
         self.nombre=nombre
         self.codigo=codigo
         
+#Definir puntos de entrada (Rutas)
+@app.route("/")
+
+def bienvenida():
+    return "Hola mundo de api"
+
+
 #Crear objeto de la clase estudiante
 
 with app.app_context():
     db.create_all()
+    
+    #encender servidor
+    app.run(debug=True)
+    
+    
