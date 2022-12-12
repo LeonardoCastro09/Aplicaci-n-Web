@@ -1,6 +1,6 @@
 #Importar bibliotecas
 
-from flask import Flask
+from flask import *
 from flask_sqlalchemy import *
 
 #Crear objeto clase Flask
@@ -34,7 +34,7 @@ class estudiante(db.Model):
 @app.route("/")
 
 def bienvenida():
-    return render_template("bienvenida.html", estudiante.query.all())
+    return render_template("bienvenida.html")
 
 
 #Crear objeto de la clase estudiante
