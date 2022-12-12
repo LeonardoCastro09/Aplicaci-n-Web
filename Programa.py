@@ -34,7 +34,7 @@ class estudiante(db.Model):
 @app.route("/")
 
 def bienvenida():
-    return "Hola mundo de api"
+    return render_template("bienvenida.html", estudiante.query.all())
 
 
 #Crear objeto de la clase estudiante
